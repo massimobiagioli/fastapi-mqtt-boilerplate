@@ -1,0 +1,10 @@
+repos:
+  - repo: local
+    hooks:
+      - id: ruff
+        name: ruff (.venv)
+        entry: ./.venv/bin/python -m ruff check --target-version=py313
+        language: system
+        types: [python]
+        pass_filenames: true
+        always_run: true
